@@ -1,5 +1,4 @@
 import React from "react";
-import { Provider } from "react-redux";
 import Products from "./pages/Products";
 import Checkout from "./pages/Checkout";
 
@@ -7,12 +6,12 @@ import { Route, Router } from "react-router";
 import { createBrowserHistory } from "history";
 
 import NavBar from "./components/NavBar";
-import { store } from "./store";
+import { StoreProvider } from "./store";
 
 function App() {
   const history = createBrowserHistory();
   return (
-    <Provider store={store}>
+    <StoreProvider>
       <div className="App">
         <Router history={history}>
           <NavBar />
@@ -20,7 +19,7 @@ function App() {
           <Route path="/cart" component={Checkout} />
         </Router>
       </div>
-    </Provider>
+    </StoreProvider>
   );
 }
 

@@ -1,23 +1,21 @@
 import React from "react";
 import "./Product.css";
-import { connect } from "react-redux";
+import { useStore } from "../store";
 
 const Product = props => {
+  const [, dispatch] = useStore();
   return (
     <div className="product">
       <div className="product-title">{props.product.title}</div>
-      <button onClick={() => props.add(props.product)}>add to cart</button>
+      <button
+        onClick={() =>
+          dispatch({ type: "ADD_PRODUCT", payload: props.product })
+        }
+      >
+        add to cart
+      </button>
     </div>
   );
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    add: product => dispatch({ type: "ADD_PRODUCT", payload: product })
-  };
-};
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(Product);
+export default Product;

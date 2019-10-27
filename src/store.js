@@ -1,6 +1,6 @@
-import { createStore } from "redux";
+import React, { useReducer, useContext } from "react";
 
-const initialState = {
+export const initialState = {
   selectedItems: [],
   products: [
     {
@@ -42,7 +42,7 @@ const initialState = {
   ]
 };
 
-const reducer = (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_PRODUCT":
       const items = state.selectedItems.filter(
@@ -90,4 +90,12 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export const store = createStore(reducer);
+const Store = React.createContext();
+
+export const useStore = () => useContext(Store);
+
+export const StoreProvider = props => (
+  <Store.Provider value={useReducer(reducer, initialState)}>
+    {props.children}
+  </Store.Provider>
+);

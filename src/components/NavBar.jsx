@@ -1,9 +1,11 @@
 import React from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-const NavBar = props => {
-  const items = props.selectedItems.reduce(
+import { useStore } from "../store";
+const NavBar = () => {
+  const [state] = useStore();
+
+  const items = state.selectedItems.reduce(
     (accumulated, item) => accumulated + item.quantity,
     0
   );
@@ -18,10 +20,4 @@ const NavBar = props => {
   );
 };
 
-function mapStateToProps(state) {
-  return {
-    selectedItems: state.selectedItems
-  };
-}
-
-export default connect(mapStateToProps)(NavBar);
+export default NavBar;
