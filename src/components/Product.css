@@ -1,0 +1,24 @@
+.product {
+  height: 100px;
+  width: 450px;
+  border: 1px solid lightgrey;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.product-title {
+  font-size: 24px;
+}
+
+.product button:hover {
+  cursor: pointer;
+}
+.product button {
+  height: 2rem;
+  margin-left: auto;
+  border-radius: 2px;
+  text-transform: uppercase;
+}

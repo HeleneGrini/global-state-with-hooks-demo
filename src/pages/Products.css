@@ -1,0 +1,11 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.products > .product {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}

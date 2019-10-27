@@ -1,0 +1,32 @@
+.checkout {
+  list-style: none;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 0;
+  border: 1px solid lightgrey;
+}
+
+.checkout li {
+  height: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.checkout li:not(:last-child) {
+  border-bottom: 1px solid lightgrey;
+}
+.checkout li > div:last-child {
+  margin-left: auto;
+}
+
+.checkout button {
+  font-size: 1.5rem;
+  border: none;
+  margin: 0 1rem;
+}
+.checkout button:hover {
+  cursor: pointer;
+}

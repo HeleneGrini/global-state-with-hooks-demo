@@ -1,0 +1,27 @@
+.NavBar {
+  height: 80px;
+  display: flex;
+  box-shadow: 0px 25px 49px -26px rgba(0, 0, 0, 0.18);
+  align-items: center;
+}
+
+.NavBar > a {
+  text-decoration-line: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  padding-left: 3rem;
+  display: flex;
+}
+
+.NavBar > a > div {
+  font-size: 24px;
+  font-weight: normal;
+  padding-left: 0.5rem;
+}
+.NavBar > button {
+  margin-left: auto;
+  border: none;
+  background: none;
+  margin-right: 1rem;
+}

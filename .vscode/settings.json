@@ -1,0 +1,10 @@
+{
+  "window.zoomLevel": 2,
+  "editor.formatOnSave": true,
+  // insert spaces when pressing tab
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "autoimport.filesToScan": "**/*.{js,jsx,ts,tsx}",
+  "autoimport.showNotifications": true
+}
