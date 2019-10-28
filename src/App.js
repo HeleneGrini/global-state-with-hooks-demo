@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import Products from "./pages/Products";
 import Checkout from "./pages/Checkout";
 
-import { Route, Router } from "react-router";
+import { Route, Router, Redirect } from "react-router";
 import { createBrowserHistory } from "history";
 
 import NavBar from "./components/NavBar";
@@ -16,6 +16,9 @@ function App() {
       <div className="App">
         <Router history={history}>
           <NavBar />
+          <Route path="/" exact={true}>
+            <Redirect to="/products" />
+          </Route>
           <Route path="/products" component={Products} />
           <Route path="/cart" component={Checkout} />
         </Router>
