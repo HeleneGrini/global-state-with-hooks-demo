@@ -5,7 +5,7 @@ import Checkout from "./pages/Checkout";
 
 import { Route, Router, Redirect } from "react-router";
 import { createBrowserHistory } from "history";
-
+//test
 import NavBar from "./components/NavBar";
 import { store } from "./store";
 function App() {
